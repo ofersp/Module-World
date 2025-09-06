@@ -617,7 +617,7 @@ namespace ModuleWorld_PWM {
 		else if(ServoNum == 3)	{ pin = AnalogPin.P2; }
 		else if(ServoNum == 4)	{ pin = AnalogPin.P10; }
 		
-		pins.servoSetPulse(pin, Math.map(value, 0, 720, 500, 2500))
+		pins.servoSetPulse(pin, Math.map(value, 0, 720, 500, 5000))
     }
 	
     //% blockId=ModuleWorld_PWM_Servo2 block="Servo(270)|pin %ServoNum|value %value"
