@@ -608,7 +608,7 @@ namespace ModuleWorld_PWM {
     //% blockId=ModuleWorld_PWM_Servo block="Servo(360)|pin %ServoNum|value %value"
     //% weight=6
     //% blockGap=20
-    //% value.min=0 value.max=360
+    //% value.min=0 value.max=720
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function Servo(ServoNum: mwServoNum, value: number): void {
 		let pin;
@@ -617,7 +617,7 @@ namespace ModuleWorld_PWM {
 		else if(ServoNum == 3)	{ pin = AnalogPin.P2; }
 		else if(ServoNum == 4)	{ pin = AnalogPin.P10; }
 		
-		pins.servoSetPulse(pin, Math.map(value, 0, 360, 500, 2500))
+		pins.servoSetPulse(pin, Math.map(value, 0, 720, 500, 2500))
     }
 	
     //% blockId=ModuleWorld_PWM_Servo2 block="Servo(270)|pin %ServoNum|value %value"
